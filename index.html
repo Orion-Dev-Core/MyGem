@@ -3,131 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orion Dev Core | Premium Automation Legacy</title>
+    <title>Orion Bridge | Mandisa-1608 Preview</title>
     <style>
-        :root {
-            --gold: #D4AF37;
-            --deep-black: #0a0a0a;
-            --soft-white: #f4f4f4;
-            --zara-glow: rgba(212, 175, 55, 0.3);
-        }
+        :root { --bg: #ffffff; --text: #1a1a1a; --gold: #D4AF37; --card: #f9f9f9; --toggle: "DARK MODE"; }
+        [data-theme="dark"] { --bg: #0a0a0a; --text: #f4f4f4; --card: #161616; --toggle: "LIGHT MODE"; }
+        
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; margin: 0; transition: 0.4s; }
+        .nav { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); }
+        .toggle { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 20px; font-size: 10px; cursor: pointer; }
+        .toggle::after { content: var(--toggle); }
 
-        body {
-            background-color: var(--deep-black);
-            color: var(--soft-white);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+        .container { padding: 20px; max-width: 400px; margin: 0 auto; }
+        .metrics { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .star-ring { width: 80px; height: 80px; border: 4px solid var(--gold); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; text-align: center; box-shadow: 0 0 15px rgba(212,175,55,0.2); }
+        
+        .lead-card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 15px; border-left: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .lead-name { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+        .wa-btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #007aff; color: white; border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: bold; }
+        
+        h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin: 40px 0 15px; text-align: center; }
+    </style>
+</head>
+<body data-theme="light">
 
-        header {
-            padding: 60px 20px;
-            border-bottom: 1px solid var(--gold);
-            width: 100%;
-        }
+    <div class="nav">
+        <div style="color: var(--gold); font-weight: bold; letter-spacing: 2px;">ORION BRIDGE</div>
+        <button class="toggle" onclick="t()"></button>
+    </div>
 
-        .logo-container {
-            margin-bottom: 20px;
-        }
+    <div class="container">
+        <div class="metrics">
+            <div class="star-ring" style="border-color: #D4AF37;">1608<br><small>Mandisa</small></div>
+            <div class="star-ring" style="border-color: #D4AF37;">2605<br><small>Mpho</small></div>
+            <div class="star-ring" style="border-color: #f4f4f4;">1812<br><small>Mintaka</small></div>
+        </div>
 
-        /* THE KYLE COMET (CSS Only) */
-        .comet {
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--gold), transparent);
-            margin: 0 auto;
-            transform: rotate(-45deg);
-            position: relative;
-        }
-        .comet::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            width: 8px;
-            height: 8px;
-            background: var(--gold);
-            border-radius: 50%;
-            top: -2px;
-            box-shadow: 0 0 15px var(--gold);
-        }
+        <h2>Mandisa-1608 Leads</h2>
+        
+        <div class="lead-card">
+            <div class="lead-name">Example Partner</div>
+            <div style="font-size: 12px; opacity: 0.7;">Dream: Testing the legacy star.</div>
+            <a href="https://wa.me/27724971810" class="wa-btn">WhatsApp Bridge</a>
+        </div>
 
-        h1 {
-            font-size: 2.5rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin: 10px 0;
-        }
+        <div style="text-align: center; margin-top: 50px; font-size: 10px; opacity: 0.4;">
+            NO ACTIVE DATA CONNECTION | PREVIEW MODE
+        </div>
+    </div>
 
-        .tagline {
-            font-style: italic;
-            opacity: 0.8;
-            font-size: 1.1rem;
+    <script>
+        function t(){
+            const b=document.body;
+            const s=b.getAttribute('data-theme')==='dark'?'light':'dark';
+            b.setAttribute('data-theme', s);
         }
-
-        .tier-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 50px 20px;
-            max-width: 1200px;
-        }
-
-        .card {
-            background: #111;
-            border: 1px solid #333;
-            padding: 40px;
-            width: 300px;
-            border-radius: 8px;
-            transition: 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            border-color: var(--gold);
-            transform: translateY(-10px);
-        }
-
-        /* THE ZARA RADIANCE */
-        .sunburst {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gold);
-            margin: 0 auto 20px;
-            box-shadow: 0 0 30px var(--zara-glow);
-        }
-
-        h2 {
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .price {
-            font-size: 0.9rem;
-            color: #888;
-            margin-bottom: 20px;
-        }
-
-        p {
-            line-height: 1.6;
-            font-size: 0.95rem;
-            height: 100px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            text-transform: uppercase;
+    </script>
+</body>
+</html>
             font-weight: bold;
             letter-spacing: 2px;
             transition: 0.3s;
