@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Dev Core | Premium Automation Legacy</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --deep-black: #0a0a0a;
+            --soft-white: #f4f4f4;
+            --zara-glow: rgba(212, 175, 55, 0.3);
+        }
+
+        body {
+            background-color: var(--deep-black);
+            color: var(--soft-white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--gold);
+            width: 100%;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        /* THE KYLE COMET (CSS Only) */
+        .comet {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), transparent);
+            margin: 0 auto;
+            transform: rotate(-45deg);
+            position: relative;
+        }
+        .comet::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: -2px;
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        .tagline {
+            font-style: italic;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .tier-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #333;
+            padding: 40px;
+            width: 300px;
+            border-radius: 8px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        /* THE ZARA RADIANCE */
+        .sunburst {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            margin: 0 auto 20px;
+            box-shadow: 0 0 30px var(--zara-glow);
+        }
+
+        h2 {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .price {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+            height: 100px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--gold);
+            color: var(--deep-black);
+        }
+
+        footer {
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="comet"></div>
+        </div>
+        <h1>Orion Dev Core</h1>
+        <p class="tagline">Premium Automation Legacy</p>
+    </header>
+
+    <div class="tier-container">
+        
+        <div class="card">
+            <div class="sunburst"></div>
+            <h2>Zara Hazelnut</h2>
+            <p class="price">The Entry-Level Gift</p>
+            <p>A radiant sunburst of automation. Designed to give business owners the "Gift of Time" by handling essential relief tasks with grace.</p>
+            <a href="#contact" class="cta-button">Deploy Zara</a>
+        </div>
+
+        <div class="card">
+            <h2>Mpho</h2>
+            <p class="price">The Partnership Core</p>
+            <p>Professional-grade reliability. A collaborative engine built to stabilize and grow your digital infrastructure with expert precision.</p>
+            <a href="#contact" class="cta-button">Inquire Mpho</a>
+        </div>
+
+        <div class="card" style="border-color: #444;">
+            <div class="comet"></div>
+            <h2>Kyle KMS-1.0</h2>
+            <p class="price">Terminal Velocity</p>
+            <p>The hardest, fastest engine in the fleet. Elite-tier performance for operations that require maximum speed and zero drag.</p>
+            <a href="#contact" class="cta-button">Engage Kyle</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Orion Dev Core | Built for Legacy
+    </footer>
+
+</body>
+</html>
+
