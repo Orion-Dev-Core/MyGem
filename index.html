@@ -3,121 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orion Bridge | Mandisa-1608 Preview</title>
+    <title>ORION INTERNATIONAL - Professional Information Agents</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --bg: #ffffff; --text: #1a1a1a; --gold: #D4AF37; --card: #f9f9f9; --toggle: "DARK MODE"; }
-        [data-theme="dark"] { --bg: #0a0a0a; --text: #f4f4f4; --card: #161616; --toggle: "LIGHT MODE"; }
-        
-        body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; margin: 0; transition: 0.4s; }
-        .nav { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); }
-        .toggle { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 20px; font-size: 10px; cursor: pointer; }
-        .toggle::after { content: var(--toggle); }
-
-        .container { padding: 20px; max-width: 400px; margin: 0 auto; }
-        .metrics { display: flex; justify-content: space-between; margin-bottom: 30px; }
-        .star-ring { width: 80px; height: 80px; border: 4px solid var(--gold); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; text-align: center; box-shadow: 0 0 15px rgba(212,175,55,0.2); }
-        
-        .lead-card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 15px; border-left: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .lead-name { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
-        .wa-btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #007aff; color: white; border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: bold; }
-        
-        h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin: 40px 0 15px; text-align: center; }
-    </style>
-</head>
-<body data-theme="light">
-
-    <div class="nav">
-        <div style="color: var(--gold); font-weight: bold; letter-spacing: 2px;">ORION BRIDGE</div>
-        <button class="toggle" onclick="t()"></button>
-    </div>
-
-    <div class="container">
-        <div class="metrics">
-            <div class="star-ring" style="border-color: #D4AF37;">1608<br><small>Mandisa</small></div>
-            <div class="star-ring" style="border-color: #D4AF37;">2605<br><small>Mpho</small></div>
-            <div class="star-ring" style="border-color: #f4f4f4;">1812<br><small>Mintaka</small></div>
-        </div>
-
-        <h2>Mandisa-1608 Leads</h2>
-        
-        <div class="lead-card">
-            <div class="lead-name">Example Partner</div>
-            <div style="font-size: 12px; opacity: 0.7;">Dream: Testing the legacy star.</div>
-            <a href="https://wa.me/27724971810" class="wa-btn">WhatsApp Bridge</a>
-        </div>
-
-        <div style="text-align: center; margin-top: 50px; font-size: 10px; opacity: 0.4;">
-            NO ACTIVE DATA CONNECTION | PREVIEW MODE
-        </div>
-    </div>
-
-    <script>
-        function t(){
-            const b=document.body;
-            const s=b.getAttribute('data-theme')==='dark'?'light':'dark';
-            b.setAttribute('data-theme', s);
+        /* [KEEP YOUR ORIGINAL CSS ROOT AND ANIMATIONS UNCHANGED] */
+        :root {
+            --primary: #D4AF37; /* Switched to Orion Gold */
+            --secondary: #004d40; /* Switched to Orion Bottle Green */
+            --dark: #0a0e27;
+            --darker: #050714;
+            --accent: #D4AF37;
+            --text: #e8e9f3;
+            --text-muted: #8b92b5;
         }
-    </script>
-</body>
-</html>
-            font-weight: bold;
-            letter-spacing: 2px;
-            transition: 0.3s;
-        }
-
-        .cta-button:hover {
-            background: var(--gold);
-            color: var(--deep-black);
-        }
-
-        footer {
-            padding: 40px;
-            font-size: 0.8rem;
-            opacity: 0.5;
-        }
+        /* ... Keep all existing CSS from your provided code ... */
     </style>
 </head>
 <body>
+    <div class="bg-grid"></div>
+    <div class="orb-glow orb-1"></div>
+    <div class="orb-glow orb-2"></div>
 
-    <header>
-        <div class="logo-container">
-            <div class="comet"></div>
+    <nav>
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <span>ORION INTERNATIONAL</span>
         </div>
-        <h1>Orion Dev Core</h1>
-        <p class="tagline">Premium Automation Legacy</p>
-    </header>
-
-    <div class="tier-container">
-        
-        <div class="card">
-            <div class="sunburst"></div>
-            <h2>Zara Hazelnut</h2>
-            <p class="price">The Entry-Level Gift</p>
-            <p>A radiant sunburst of automation. Designed to give business owners the "Gift of Time" by handling essential relief tasks with grace.</p>
-            <a href="#contact" class="cta-button">Deploy Zara</a>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#features">The Agent</a>
+            <a href="#pricing">Tiers</a>
+            <a href="#about">The Universe</a>
+            <a href="#contact">Compliance</a>
+            <a href="#" class="cta-btn">Book Demo</a>
         </div>
+    </nav>
 
-        <div class="card">
-            <h2>Mpho</h2>
-            <p class="price">The Partnership Core</p>
-            <p>Professional-grade reliability. A collaborative engine built to stabilize and grow your digital infrastructure with expert precision.</p>
-            <a href="#contact" class="cta-button">Inquire Mpho</a>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-crown"></i> 5-Star Professional Information Agent
+            </div>
+            <h1>Elite Guest Intelligence for World-Class Hotels</h1>
+            <p>Deploy a closed-loop AI Concierge that masters your menus, protocols, and guest requests. Automate inquiries and capture verified leads for your reservations team 24/7.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="cta-btn">Deploy Your Agent</a>
+                <a href="#features" class="btn-secondary">Explore Capabilities</a>
+            </div>
         </div>
+    </section>
 
-        <div class="card" style="border-color: #444;">
-            <div class="comet"></div>
-            <h2>Kyle KMS-1.0</h2>
-            <p class="price">Terminal Velocity</p>
-            <p>The hardest, fastest engine in the fleet. Elite-tier performance for operations that require maximum speed and zero drag.</p>
-            <a href="#contact" class="cta-button">Engage Kyle</a>
+    <section class="section" id="features">
+        <div class="section-header">
+            <div class="section-badge">ELITE CAPABILITIES</div>
+            <h2>Hospitality Intelligence Redefined</h2>
+            <p class="section-subtitle">A professional layer between your guests and your team, designed to harvest leads and ensure excellence.</p>
         </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-concierge-bell"></i></div>
+                <h3>Closed-Loop Intelligence</h3>
+                <p>Our agents only use the data you provide. No hallucinations, no external links—just pure hotel expertise.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+                <h3>Verified Lead Capture</h3>
+                <p>Instead of sending guests to broken links, we capture names and emails and hand them to your reservations team.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Menu & Spa Mastery</h3>
+                <p>Trained on your complex dining hours, spa brochures, and seasonal offerings for instant guest clarity.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>POPIA Compliant</h3>
+                <p>Bank-grade data handling ensuring guest privacy and full South African regulatory compliance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <h3>48-Hour Deployment</h3>
+                <p>From info-receipt to live deployment on your site and QR codes in under two days.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                <h3>Emergency Alerts</h3>
+                <p>High-priority Discord triggers for VIP requests or management escalations.</p>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <section class="section" id="pricing">
+        <div class="section-header">
+            <div class="section-badge">INVESTMENT TIERS</div>
+            <h2>Tailored To Your Property</h2>
+            <p class="section-subtitle">Bespoke pricing based on complexity and value</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-badge">3-STAR</div>
+                <h3>Essential Agent</h3>
+                <div class="pricing-price">$149<span style="font-size: 16px;"> Setup</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">$39/mo thereafter</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Core Hotel FAQs</li>
+                    <li><i class="fas fa-check"></i> Check-in/Out Protocols</li>
+                    <li><i class="fas fa-check"></i> WiFi & Parking Info</li>
+                    <li><i class="fas fa-check"></i> Standard Discord Alerts</li>
+                </ul>
+                <a href="#" class="cta-btn" style="width: 100%; text-align: center;">Get Started</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="pricing-badge">4-STAR PROFESSIONAL</div>
+                <h3>Upsell Master</h3>
+                <div class="pricing-price">$249<span style="font-size: 16px;"> Setup</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">$59/mo thereafter</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Full Restaurant Menus</li>
+                    <li><i class="fas fa-check"></i> Spa & Wellness Integration</li>
+                    <li><i class="fas fa-check"></i> Local Area Expertise</li>
+                    <li><i class="fas fa-check"></i> Advanced Lead Capture</li>
+                    <li><i class="fas fa-check"></i> Priority Setup</li>
+                </ul>
+                <a href="#" class="cta-btn" style="width: 100%; text-align: center;">Choose Pro</a>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">5-STAR ELITE</div>
+                <h3>The Universe Mode</h3>
+                <div class="pricing-price">$399<span style="font-size: 16px;"> Setup</span></div>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">$99/mo thereafter</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Multi-Property Logic (Nebula)</li>
+                    <li><i class="fas fa-check"></i> VIP Escalation Protocols</li>
+                    <li><i class="fas fa-check"></i> Dineplan System Integration</li>
+                    <li><i class="fas fa-check"></i> High-Volume Processing</li>
+                    <li><i class="fas fa-check"></i> SLA Uptime Guarantee</li>
+                </ul>
+                <a href="#" class="btn-secondary" style="width: 100%; text-align: center;">Contact Orion Elite</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2025 Orion Dev Core | Built for Legacy
+        <div class="footer-bottom">
+            <p>&copy; 2025 Orion Dev Core. Professional Information Agent Solutions. POPIA Compliant.</p>
+        </div>
     </footer>
-
 </body>
 </html>
 
